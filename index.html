@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grid Responsive</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <div class="grid-container">
+    <!-- 1. Calculadora de BMI -->
+    <div class="grid-item item-1">
+      <h2>Calculadora de BMI</h2>
+      <input type="number" id="weight" placeholder="Peso (kg)" step="0.1">
+      <input type="range" id="heightSlider" min="1.0" max="3.0" step="0.01" value="1.75">
+      <input type="number" id="height" placeholder="Altura (m)" step="0.01" value="1.75">
+      <button onclick="calculateBMI()">Calcular BMI</button>
+      <p id="bmiResult"></p>
+    </div>
+
+    <!-- 2. Generador de Nombres de Usuario -->
+    <div class="grid-item item-2">
+      <h2>Generador de Nombres</h2>
+      <input id="firstName" type="text" placeholder="Nombre">
+      <input id="lastName" type="text" placeholder="Apellido">
+      <button onclick="generateUsername()">Generar Usuario</button>
+      <p id="usernameResult"></p>
+    </div>
+
+    <!-- 5. Agenda Telefónica -->
+    <div class="grid-item item-3">
+      <h2>Agenda Telefónica</h2>
+      <input id="contactName" type="text" placeholder="Nombre del contacto">
+      <input id="contactNumber" type="text" placeholder="Número de teléfono">
+      <button onclick="addContact()">Agregar Contacto</button>
+      <input id="searchName" type="text" placeholder="Buscar contacto">
+      <button onclick="searchContact()">Buscar</button>
+      <p id="phonebookResult"></p>
+    </div>
+
+    <!-- 6. Simulador de Lanzamiento de Dados -->
+    <div class="grid-item item-4">
+      <h2>Simulador de Dados</h2>
+      <button onclick="rollDice()">Lanzar Dados</button>
+      <p id="diceResult"></p>
+    </div>
+
+    <!-- 7. Validador de Dirección de Correo Electrónico -->
+    <div class="grid-item item-5">
+      <h2>Validador de Correo</h2>
+      <input type="email" id="emailValidator" placeholder="Correo Electrónico">
+      <button onclick="validateEmail()">Validar Correo</button>
+      <p id="emailValidationResult"></p>
+
+    </div>
+
+    <!-- 8. Calculadora de Propinas -->
+    <div class="grid-item item-6">
+      <h2>Calculadora de Propinas</h2>
+      <input id="billAmount" type="number" placeholder="Total de la factura">
+      <input id="tipPercentage" type="number" placeholder="Porcentaje de propina">
+      <button onclick="calculateTip()">Calcular Propina</button>
+      <p id="tipResult"></p>
+    </div>
+
+    <!-- 24. Generador de Contraseñas -->
+    <div class="grid-item item-7">
+      <h2>Generador de Contraseñas</h2>
+      <input id="passwordLength" type="number" placeholder="Longitud (8-16)">
+      <label><input id="includeUppercase" type="checkbox"> Mayúsculas</label>
+      <label><input id="includeNumbers" type="checkbox"> Números</label>
+      <label><input id="includeSymbols" type="checkbox"> Símbolos</label>
+      <button onclick="generatePassword()">Generar</button>
+      <p id="passwordResult"></p>
+    </div>
+
+    <!-- 26. Piedra, Papel, Tijera, Lagarto, Spock -->
+    <div class="grid-item item-8">
+        <h2>8. Piedra, Papel, Tijera, Lagarto, Spock</h2>
+        <div class="ppt">
+                <button  onclick="playGame('piedra')">Piedra</button>
+                <button onclick="playGame('papel')">Papel</button>
+                <button  onclick="playGame('tijera')">Tijera</button>
+                <button onclick="playGame('lagarto')">Lagarto</button>
+                <button onclick="playGame('spock')">Spock</button>
+        </div>
+        <button onclick="playGame()">Jugar Aleatorio</button>
+        <p id="gameResult"></p>
+    </div>
+
+    <!-- 36. Cuenta Atrás -->
+    <div class="grid-item item-9">
+      <h2>Cuenta Atrás</h2>
+      <input id="countStart" type="number" placeholder="Inicio">
+      <input id="countInterval" type="number" placeholder="Intervalo (seg)">
+      <button onclick="startCountdown()">Iniciar</button>
+      <p id="countdownResult"></p>
+    </div>
+
+    <!-- 39. Sombrero seleccionador -->
+    <div class="grid-item item-10">
+        <h2>10. Sombrero Seleccionador</h2>
+        <p>Responde las preguntas y elige el número correspondiente a la opción que mejor te describe.</p>
+        <p id="question"></p>
+        <div id="sortingHat">
+          <button onclick="answerQuestion(1)">Opción 1</button>
+          <button onclick="answerQuestion(2)">Opción 2</button>
+          <button onclick="answerQuestion(3)">Opción 3</button>
+          <button onclick="answerQuestion(4)">Opción 4</button>
+          
+    </div>
+    <p id="sortingResult"></p>
+  </div>
+  <script src="/app.js"></script>
+
+</body>
+</html>
